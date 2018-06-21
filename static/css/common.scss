@@ -1,0 +1,109 @@
+body,div,html,ul,ol,li,p,form,input,button,
+textarea,span {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-family: 'Helvetica Neue',Tahoma,Arial,PingFangSC-Regular,'Hiragino Sans GB','Microsoft Yahei',sans-serif;
+  line-height: 1.2;
+}
+ul,ol {
+  list-style: none;
+}
+input{
+  outline: none;
+  border: 1px solid;
+}
+$blue: #409EFF;
+.flex {
+  display: flex;
+}
+.column {
+  flex-direction: column;
+}
+.between {
+  justify-content: space-between;
+}
+.all-center {
+  justify-content: center;
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.align-center {
+  align-items: center;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+.flex1 {
+  flex: 1;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+.text-justify {
+  text-align: justify;
+}
+.font12 {
+  font-size: 12px;
+}
+.font14 {
+  font-size: 14px;
+}
+.font16 {
+  font-size: 16px;
+}
+.font18 {
+  font-size: 18px;
+}
+.ma-btn {
+  background: $blue;
+  color: #fff;
+  display: inline-block;
+  padding: 0.75em 1.5em;
+  border-radius: 100px;
+  border: 1px solid $blue;
+  transition: transform .3s ease-out;
+}
+.ma-btn:active {
+  transform: scale(0.8);
+}
+.ma-btn+.ma-btn {
+  margin-left: 20px;
+}
+.add--btn {
+  background: transparent;
+  color: $blue;
+}
+
+.slide-right-enter-active {
+  animation: slide-right .3s ease-out;
+}
+@keyframes slide-right {
+  0% {
+    transform: translate(100%);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+.slide-left-enter-active {
+  animation: slide-left .3s ease-out;
+}
+@keyframes slide-left {
+  0% {
+    transform: translate(-100%);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
