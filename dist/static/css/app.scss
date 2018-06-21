@@ -1,0 +1,41 @@
+
+
+.calendar--weekdays {
+  color: rgba(0,0,0,.54);
+  margin-top: 20px;
+  font-size: 10px;
+}
+@mixin per7 {
+  width: 1.31rem;
+  box-sizing: border-box;
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calnedar--weekday,
+.calendar--item {
+  @include per7;
+}
+.calendar--lists {
+  color: rgba(0,0,0,.89);
+  font-size: 16px;
+}
+.calendar--item__total {
+  font-size: 10px;
+  color: rgba(0,0,0,.72);
+}
+.calendar--item {
+  height: 1.42rem;
+  border-radius: 50%;
+  flex-direction: column;
+  &.active {
+    background: rgba(255,0,0,.8);
+    color: #fff;
+    .calendar--item__total {
+      color: #fff;
+    }
+  }
+}
+
+

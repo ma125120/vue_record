@@ -1,6 +1,7 @@
 # vue_record
 
 > 记账
+在线访问： [https://ma125120.github.io/vue_record/dist/](https://ma125120.github.io/vue_record/dist/)
 
 ## Build Setup
 
