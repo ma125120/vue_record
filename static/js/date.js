@@ -23,7 +23,10 @@ var getYear = function(year) {
   for(let i = 1; i <13 ; i++) {
     let dates = new Date(year,i,0).getDate(),
         obj = {},
-        _arr = new Array(dates).fill(0);
+        _arr = [];
+    for(let j = 0; j < dates; j++) {
+      _arr[j] = 0;
+    }
     _arr = _arr.map((v,index)=>{
       return getDateInfo( new Date(year, i - 1 , index +1 ));
     });

@@ -92,9 +92,10 @@ export default {
       this.$vlf.createInstance({
         storeName: 'record'
       }).then(async (store) => {
-          var records = await store.getItem(year);
+          var records = await store.getItem(year);console.log(records)
           if(!records) {
             records = getYear(year);
+            
             store.setItem(year, records);
           } else {
             this.records = records;
