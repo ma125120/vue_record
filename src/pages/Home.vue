@@ -70,12 +70,11 @@ export default {
   },
   computed:{
     emptyLen() {
-      return this.now_month && this.now_month[0] && this.now_month[0].day || 1;
+      return this.now_month && this.now_month[0] && this.now_month[0].day || 7;
     }
   },
   methods:{
     initData(now_date) {
-      
       var now_date = now_date || getDateInfo();
       this.now_date = now_date;
       this.getStore(now_date.year + "",function(records) {
@@ -92,10 +91,9 @@ export default {
       this.$vlf.createInstance({
         storeName: 'record'
       }).then(async (store) => {
-          var records = await store.getItem(year);console.log(records)
+          var records = await store.getItem(year);
           if(!records) {
             records = getYear(year);
-            
             store.setItem(year, records);
           } else {
             this.records = records;

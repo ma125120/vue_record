@@ -14,7 +14,7 @@
             type="text" 
             class="detail--input"
             :value="item.text"
-            @change="changeObj(i,$event)">
+            @focusout="changeObj(i,$event)">
       </li>
     </ul>
     <div class="ma-btns flex all-center">

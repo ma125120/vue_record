@@ -40,31 +40,7 @@ export default {
     }
   },
   methods:{
-    initData() {
-      var now_date = getDateInfo();
-      this.now_date = now_date;
-      this.getStore(now_date.year + "",function(records) {
-        this.now_month = records[now_date.month -1];
-      });
-    },
-    isActive(obj) {
-      var now_date = this.now_date;
-      return obj.year == now_date.year && obj.month == now_date.month && obj.date == now_date.date;
-    },
-    getStore(year = (getDateInfo().year + ""),cb) {
-      this.$vlf.createInstance({
-        storeName: 'record'
-      }).then(async (store) => {
-          var records = await store.getItem(year);
-          if(!records) {
-            records = getYear(year);
-            store.setItem(year, records);
-          } else {
-            this.records = records;
-          }
-          cb && cb.call(this,records);
-      })
-    }
+
   },
   created() {
    
